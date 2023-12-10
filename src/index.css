@@ -1,13 +1,65 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.mycontainer {
+  margin-top: 20px;
+  width: 80%;
+  padding: 10px;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: white;
+}
+
+.label {
+  float: left;
+  padding: 5px;
+}
+
+.addicon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background-color: rgb(41, 99, 185);
+  border-radius: 100px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  top: 50;
+  left: 0;
+  padding: 10px;
+}
+
+
+.pdficon {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  top: 50;
+  margin-left: 200px;
+  padding: 10px;
+  /* background-color: rgb(214, 183, 190); */
+  /* border-radius: 100%; */
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    background-color: white;
+  }
+
+  .mycontainer {
+    margin-top: 20px;
+    width: 40%;
+    padding: 10px;
+    background-color: #fff;
+
+  }
+
+}
+
+.logo {
+  width: 150px;
+  height: 80px;
+}
+
+.logo_div {
+  margin-top: 30px;
+  text-align: center;
 }
