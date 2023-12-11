@@ -60,10 +60,10 @@ const FormWithAddButton = () => {
             styles: { fontSize: 12, setFont: 'Timer' },
 
         });
-        console.log(formData.length, "lllllllllllllllllllll")
+        // console.log(formData.length, "lllllllllllllllllllll")
         pdf.text('Total:' + gettotal, 160, 180 + formData.length);
-        pdf.text('Customer Sign', 30, 100 + formData.length);
-        pdf.text('For 7star', 140, 100 + formData.length);
+        pdf.text('Customer Sign', 30, 200 + formData.length);
+        pdf.text('For 7star', 140, 200 + formData.length);
         pdf.save('table.pdf');
     };
 
