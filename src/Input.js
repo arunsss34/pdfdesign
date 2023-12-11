@@ -27,8 +27,8 @@ const FormWithAddButton = () => {
 
     const handleAddForm = () => {
         setFormData((prevFormData) => [...prevFormData, { SLNo: '', Description: '', Quantity: '', Rate: '', Amount: '' }]);
-        const totAmount = formData.reduce((sum, obj) => sum + obj.Amount, 0);
-        setTotal(totAmount)
+        // const totAmount = formData.reduce((sum, obj) => sum + obj.Amount, 0);
+        // setTotal(totAmount)
     };
 
     function generatePDF() {
@@ -60,9 +60,10 @@ const FormWithAddButton = () => {
             styles: { fontSize: 12, setFont: 'Timer' },
 
         });
-        pdf.text('Total:' + gettotal, 160, 180);
-        pdf.text('Customer Sign', 30, 200);
-        pdf.text('For 7star', 140, 200);
+        console.log(formData.length, "lllllllllllllllllllll")
+        pdf.text('Total:' + gettotal, 160, 180 + formData.length);
+        pdf.text('Customer Sign', 30, 100 + formData.length);
+        pdf.text('For 7star', 140, 100 + formData.length);
         pdf.save('table.pdf');
     };
 
