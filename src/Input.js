@@ -61,9 +61,9 @@ const FormWithAddButton = () => {
 
         });
         // console.log(formData.length, "lllllllllllllllllllll")
-        pdf.text('Total:' + gettotal, 160, 100 + formData.length);
-        pdf.text('Customer Sign', 30, 130 + formData.length);
-        pdf.text('For 7star', 140, 130 + formData.length);
+        pdf.text('Total:' + gettotal, 160, 85 + formData.length);
+        pdf.text('Customer Sign', 30, 95 + formData.length);
+        pdf.text('For 7star', 140, 95 + formData.length);
         pdf.save('table.pdf');
     };
 
