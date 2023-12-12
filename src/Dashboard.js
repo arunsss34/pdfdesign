@@ -13,12 +13,13 @@ import logout from './logout.jpg'
 
 const Dashboard = () => {
     const [gettotal, setTotal] = useState(0)
-    const [inputAddr, setinputAddr] = useState('');
+    const [getadrrs, setgetadrrs] = useState('')
     const [formData, setFormData] = useState([{ SLNo: '', Description: '', Quantity: '', Rate: '', Amount: '' }]);
     const allOptions = ['GD 200A - 004G/5R5P-4 4kw', 'GD 200A - 5R5G/7R5P-4 5.5kw',];
-    const handleInputChange1 = (event) => {
-        setinputAddr(event.target.value);
-    };
+    const handleInputChange1 = (val) => {
+        setgetadrrs(val)
+        console.log(val)
+    }
     const handleInputChange = (index, field, value) => {
         setFormData((prevFormData) => {
             const updatedData = [...prevFormData];
@@ -31,9 +32,8 @@ const Dashboard = () => {
         });
     };
 
-    const handleAddForm = (event) => {
+    const handleAddForm = () => {
         setFormData((prevFormData) => [...prevFormData, { SLNo: '', Description: '', Quantity: '', Rate: '', Amount: '' }]);
-        setinputAddr(event.target.value);
     };
 
     function generatePDF() {
@@ -53,10 +53,9 @@ const Dashboard = () => {
         const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
         const formattedDateTime = currentDateTime.toLocaleString('en-US', options);
         pdf.text('Date :' + formattedDateTime, 148, 46);
-
         pdf.text('QUOTATION', 89, 60);
         pdf.text('To', 20, 70)
-        pdf.text(inputAddr, 25, 76)
+        pdf.text(getadrrs, 25, 76)
         pdf.rect(14, 63, 182, 20);
         const headers = Object.keys(formData[0]);
         const body = formData.map((row) => Object.values(row));
@@ -84,9 +83,9 @@ const Dashboard = () => {
                     aria-label="Product"
                     aria-describedby="basic-addon1"
                     type="text"
-                    value={inputAddr}
-                    onChange={handleInputChange1}
-                    required
+                    value={getadrrs}
+                    onChange={(e) => handleInputChange1(e.target.value)}
+                    id="address_id"
                 />
             </div><br />
             {formData.map((form, index) => (
