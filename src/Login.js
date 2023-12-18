@@ -3,7 +3,7 @@ import logo1 from './logo1.png'
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import tech from './tech.png'
 
 
 function Login({ setIsAuthenticated }) {
@@ -44,7 +44,8 @@ function Login({ setIsAuthenticated }) {
                         <i class='bx bxs-lock-alt'></i>
                     </div>
                     <button type="submit" class="btn">Login</button>
-                </form>
+                </form><br /><br />
+                <div className='tech'>Powered by <br /><img src={tech} className='img_tech' /></div>
             </div>
         </>);
 }

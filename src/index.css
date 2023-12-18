@@ -202,3 +202,15 @@ body {
   text-align: right;
   position: sticky;
 }
+
+
+.tech {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 10px;
+}
+
+.img_tech {
+  width: 100px;
+  height: 100px;
+}
