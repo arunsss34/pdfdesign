@@ -67,9 +67,9 @@ const Dashboard = () => {
             styles: { fontSize: 12, setFont: 'Timer' },
 
         });
-        pdf.text('Total:' + gettotal, 160, (150 + formData.length + 20));
-        pdf.text('Customer Sign', 30, (170 + formData.length + 20));
-        pdf.text('For 7star', 140, (170 + formData.length + 20));
+        pdf.text('Total:' + gettotal, 160, (150 + formData.length * 10));
+        pdf.text('Customer Sign', 30, (170 + formData.length * 10));
+        pdf.text('For 7star', 140, (170 + formData.length * 10));
         pdf.save('Quotation.pdf');
     };
 
