@@ -138,11 +138,11 @@ const Dashboard = () => {
             </div>
             <nav class="header-nav ms-auto pe-4">
                 <div class="p-3">
-                    <a class="btn btn-outline-primary btn-md ms-2" onClick={handleAddForm}>
+                    <a class="btn btn-outline-success btn-md ms-2" onClick={handleAddForm}>
                         <i class="bi bi-box-arrow-right pe-1"></i>
                         <span>Add</span>
                     </a>
-                    <a class="btn btn-outline-primary btn-md ms-2" onClick={generatePDF}>
+                    <a class="btn btn-outline-danger btn-md ms-2" onClick={generatePDF}>
                         <i class="bi bi-box-arrow-right pe-1"></i>
                         <span>Pdf</span>
                     </a>
@@ -150,10 +150,10 @@ const Dashboard = () => {
                         <i class="bi bi-box-arrow-right pe-1"></i>
                         <span>Print</span>
                     </a>
-                    <a class="btn btn-outline-danger btn-md ms-2" href="/login" id="logoutButton">
+                    {/* <a class="btn btn-outline-danger btn-md ms-2" href="/login" id="logoutButton">
                         <i class="bi bi-box-arrow-right pe-1"></i>
                         <span>Log Out</span>
-                    </a>
+                    </a> */}
                 </div>
             </nav>
         </header>
