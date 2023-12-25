@@ -30,7 +30,7 @@ function Login({ setIsAuthenticated }) {
         }
     }
     return (
-        <>
+        <><br />
             <ToastContainer />
             <div class="wrapper">
                 <div className='logo_login'><img src={logo1} className='logo' /></div>

@@ -1,11 +1,7 @@
 .mycontainer {
-  margin-top: 20px;
-  width: 80%;
-  padding: 30px;
+  margin-top: 10px;
+
   border: 1px solid rgba(255, 255, 255, .2);
-  border-radius: 20px;
-
-
 }
 
 
@@ -36,23 +32,10 @@
   padding: 10px;
 }
 
-@media screen and (min-width: 600px) {
-
-  .mycontainer {
-    margin-top: 20px;
-    width: 60%;
-    padding: 20px;
-    border-radius: 10%;
-    border: 1px solid rgba(255, 255, 255, .2);
-
-
-  }
-
-}
 
 .logo {
-  width: 150px;
-  height: 80px;
+  width: 120px;
+  height: 60px;
 }
 
 .logo_div {
@@ -74,7 +57,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 85vh;
   background: black;
   background-position: center;
 }
@@ -117,7 +99,21 @@ body {
   padding: 20px 45px 20px 20px;
 }
 
+.input-box1 input {
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 8px;
+  font-size: 16px;
+  color: #0073cb;
+}
+
 .input-box input::placeholder {
+  color: #0073cb;
+}
+
+.input-box1 input::placeholder {
   color: #0073cb;
 }
 
@@ -134,7 +130,7 @@ body {
   display: flex;
   justify-content: space-between;
   font-size: 14.5px;
-  margin: -15px 0 15px;
+  /* margin: -15px 0 15px; */
 }
 
 .remember-forgot label input {
@@ -213,4 +209,12 @@ body {
 .img_tech {
   width: 60px;
   height: 60px;
+}
+
+.dash {
+  margin-top: 90px;
+}
+
+.customer {
+  border: 2px solid none;
 }
